@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./popup.css" />
+  </head>
+  <body>
+    <template id="li_template">
+      <li>
+        <a>
+          <h3 class="person">Primary Person</h3>
+          <p class="generations">Generations</p>
+          <input type="button" value="Download" class="download" />
+          <input type="button" value="Remove" class="remove" />
+          <input type="button" value="Update" class="update" />
+        </a>
+      </li>
+    </template>
+
+    <h1>Get Familysearch GEDCOM</h1>
+    <input type="button" value="New GEDCOM for Individual" id="getNew" />
+    <ul></ul>
+
+    <input type="button" value="Clear ALL info" id="clear" />
+    <script src="./popup.js" type="module"></script>
+  </body>
+</html>
