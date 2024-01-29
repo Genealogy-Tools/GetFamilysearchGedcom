@@ -25,8 +25,8 @@ async function getStorage() {
             // update a person
             // verify id in gedFiles
             const urlId = tab.url.slice(tab.url.length-8)
-            const primaryIdx = gedFiles.find(p=>p.id === urlId)
-            if (primaryIdx === -1) {
+            const primaryIdx = file.findIndex(p=>p.id === urlId)
+            if (!primaryIdx || primaryIdx === -1) {
               return // nothing to update
             }
             //get data
@@ -41,8 +41,9 @@ async function getStorage() {
             })
             let death = response[0].result
             //update gedFiles
-            gedFiles[primaryIdx].birthYear = birth
-            gedFiles[primaryIdx].deathYear = death
+            file[primaryIdx].birthYear = birth
+            file[primaryIdx].deathYear = death
+            gedFiles[index] = file
             chrome.storage.local.set({gedFiles: gedFiles}, function () {})
           } else {
             //update with more people
