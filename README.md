@@ -1,5 +1,5 @@
 # Get Familysearch GEDCOM
-Gets info from familysearch fanchart to create gedcom data*
+Gets info from familysearch fanchart to create gedcom data from chrome extension*
 
 ## Install
 1. Download v#.#.# from Release (right hand side)
