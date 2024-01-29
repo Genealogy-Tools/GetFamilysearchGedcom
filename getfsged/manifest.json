@@ -1,0 +1,17 @@
+{
+	"name": "Get Familysearch GEDCOM",
+	"description": "Quickly get familysearch gedcom info from fanchart",
+	"version": "1.0",
+	"manifest_version": 3,
+	"background": {
+		"service_worker": "background.js"
+	},
+	"action": {
+		"default_popup": "popup.html"
+	},
+	"host_permissions": [
+		"https://familysearch.org/*",
+		"https://www.familysearch.org/*"
+	],
+	"permissions": ["storage", "contextMenus", "scripting", "activeTab","tabs","clipboardRead","downloads","notifications"]
+}
